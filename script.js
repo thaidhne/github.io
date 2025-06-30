@@ -29,3 +29,14 @@ toggleDarkCheckbox.addEventListener('change', () => {
   const isDark = body.classList.contains('dark-mode');
   localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
 });
+
+const music = document.getElementById("bg-music");
+
+  function playMusicOnce() {
+    music.play();
+    // Gỡ bỏ sự kiện sau khi phát 1 lần
+    document.removeEventListener("click", playMusicOnce);
+  }
+
+  // Lắng nghe click trên toàn trang
+  document.addEventListener("click", playMusicOnce);
