@@ -536,6 +536,8 @@ body.dark-mode .custom-send-btn img {
   filter: invert(0); /* đảo màu cho dark mode */
 }
 
+
+
 /* Responsive for iPhone 14, 15, 16 and similar devices */
 @media only screen and (max-width: 460px) {
   body {
@@ -664,4 +666,17 @@ body.dark-mode .custom-send-btn img {
   .open-invite {
     text-align: center;
   }
+
+  .contact-form input,
+.contact-form textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s;
+  width: 90%;
+}
+
 }

@@ -70,3 +70,4 @@ const music = document.getElementById("bg-music");
       alert("Oops! Something went wrong. Please try again.");
     });
   });
+
