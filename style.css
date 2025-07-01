@@ -319,6 +319,7 @@ footer {
     margin: 0;
     font-size: 23px;
   }
+
 #play-music {
   display: none;
 }
@@ -370,6 +371,171 @@ h1, h2, h3, nav {
   font-family: 'Poppins', sans-serif;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 40px; 
+}
+
+.about-bio {
+  margin-left: 0px;
+}
+.about-info {
+  margin-left: 50px;
+}
+.about-bio p {
+  line-height: 1.8;
+}
+
+.about-info h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.experience-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.experience-item span {
+  color: var(--highlight-bg);
+  background: var(--highlight-text);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.experience-item .time {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.open-invite {
+  background: var(--card-bg);
+  padding: 20px 25px;
+  border-radius: 10px;
+  color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.open-invite h3 {
+  margin-bottom: 12px;
+}
+
+.open-invite ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.open-invite ul li {
+  margin-bottom: 8px;
+}
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: none; /* Ngăn kéo rộng hoặc cao */
+}
+
+
+.custom-send-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.custom-send-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--highlight-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.custom-send-btn img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* cho light mode */
+  transition: filter 0.3s ease;
+}
+body.dark-mode .custom-send-btn img {
+  filter: invert(0); /* đảo màu cho dark mode */
+}
+
 /* Responsive for iPhone 14, 15, 16 and similar devices */
 @media only screen and (max-width: 460px) {
   body {
@@ -400,7 +566,13 @@ h1, h2, h3, nav {
     width: 55px;
     height: 30px;
   }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 
+  .about-info li {
+    font-size: 15px;
+  }
   .hero {
     padding: 40px 10px;
   }
@@ -484,5 +656,12 @@ h1, h2, h3, nav {
     display: flex;
     gap: 20px;
     justify-content: center;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .open-invite {
+    text-align: center;
   }
 }

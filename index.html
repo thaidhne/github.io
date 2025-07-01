@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ThaiDH | Portfolio</title>
+  <title>Hoang Thai</title>
   <link rel="icon" href="icons/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -44,8 +45,9 @@
         <img src="images/profile.jpg" alt="Profile photo of Thai" class="avatar-square" />
       </div>
       <div class="text caption-side">
-        <h2 class="typewriter">Hi, I'm <span class="highlight">Thai</span></h2>
-        <p>Hi there, I'm Thai Dinh Hoang, a .NET backend developer in core banking and web development who loves building cool things with code.</p>
+        <h2 class="typewriter">Hi, I'm <span class="highlight">Thai</span> 👋</h2>
+    <p>I’ve been working as a backend developer for over 3 years, mainly in the core-banking solution.</p>
+    <p>I write most of my code in .NET, and love building things that just… work.</p>
         <p>You can find me on IG or FB – check my bio for more info.</p>
         <div class="social-links">
           <a href="https://facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook"/></a>
@@ -58,20 +60,60 @@
   
 
 
- <section id="about" class="fade-in">
-  <div class="container">
-    <div class="about-title">
-      <img src="images/person.svg" alt="About Icon" />
-      <h2>About Me</h2>
+  <section id="about" class="fade-in">
+    <div class="container about-grid">
+      <div class="about-bio">
+        <div class="about-title">
+          <img src="images/aboutme.svg" alt="About Icon" style="width: 60px; height: 60px;"/>
+          <h2>About Me</h2>
+        </div>
+        <p>
+          Hey there! 👋<br>
+          I'm <strong>Thai Dinh Hoang</strong> — a backend developer with over <strong>3 years of experience</strong> in the core banking field.<br><br>
+  
+          I specialize in building reliable systems using <strong>C#</strong>, and I’ve worked on large-scale financial platforms that power everyday banking operations.  
+          I also enjoy front-end development and occasionally design web templates for fun.<br><br>
+  
+          When I’m not coding, you might catch me <strong>camping under the stars</strong>, wandering through dreamy landscapes,  
+          or sipping coffee at a quiet spot with friends.  
+          I'm always open to new ideas, new connections, and building something meaningful. 🌿🏕️☕
+        </p>
+      </div>
+  
+      <div class="about-info">
+        <div class="about-title">
+          <img src="images/person.svg" alt="About Icon"/>
+          <h2>Person Infor</h2>
+        </div>
+        <ul>
+          <li><strong>Full Name:</strong> Thai Dinh Hoang</li>
+          <li><strong>Email:</strong> <a href="mailto:tuilathainee@gmail.com">tuilathainee@gmail.com</a></li>
+          <li><strong>Location:</strong> Ho Chi Minh City, Vietnam</li>
+          <li><strong>Experience:</strong> 3+ years in backend development</li>
+          <li><strong>Main Language:</strong> C# (.NET)</li>
+          <li><strong>Freelance:</strong> Available</li>
+        </ul>
+      </div>
     </div>
-    <p>Hey there! I’m Thai 👋</p>
-    <p>I’ve been working as a backend developer for over 3 years, mainly in the core banking world.</p>
-    <p>I write most of my code in .NET, and love building things that just… work.</p>
-    <p>Outside of banking systems, I enjoy creating websites and even dabble in a bit of UI/UX design — turning simple ideas into cool, functional designs is super fun to me!</p>
-    <p>When I’m not coding, you’ll probably find me camping under the stars, wandering somewhere dreamy, or exploring a quiet place off the grid. Nature is my reset button 🌿🏕️✨</p>
-  </div>
-</section>
+  </section>
 
+  <section id="experience" class="fade-in">
+    <div class="container">
+      <div class="about-title">
+        <img src="images/bag.svg" alt="About Icon" style="width: 50px; height: 50px;" />
+        <h2>Experience</h2>
+      </div>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Software Developer</h3>
+          <p class="time">2022 – Present</p>
+          <p>I work as a core banking backend developer, building and maintaining secure, high-performance systems that power daily financial operations.
+            Using C# and .NET, I develop APIs, optimize transaction workflows, and collaborate with teams to ensure stability, scalability, and compliance in critical banking environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <section id="projects" class="fade-in">
     <div class="container">
@@ -79,32 +121,36 @@
       <div class="project-list">
         <div class="project-card">
           <h3>Project One</h3>
-          <p>Example description of a modern web app.</p>
+          <p>Update soon ...</p>
         </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>Another cool thing I built.</p>
-        </div>
+        
       </div>
     </div>
   </section>
 
   <section id="contact" class="fade-in contact-section">
-    <div class="container">
-      <div class="about-title">
-        <img src="images/mail.svg" alt="About Icon" style="width: 50px; height: 50px;" />
-        <h2>Contact Me</h2>
-      </div>
-      <p>Feel free to reach out! I'd love to hear from you.</p>
+    <div class="container contact-wrapper">
+      <div class="left-column">
+        <div class="about-title">
+          <img src="images/mail.svg" alt="About Icon" style="width: 50px; height: 50px;" />
+          <h2>Contact Me</h2>
+        </div>
+        <p>Feel free to reach out! I'd love to hear from you.</p>
   
-      <form action="https://formspree.io/f/xvgrlvon" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="write somethings for me ..." required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+        <form action="https://formspree.io/f/xvgrlvon" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Write something for me..." required></textarea>
+          <button type="submit" id="sendBtn" class="custom-send-btn">
+            <img src="images/send.svg" alt="Send icon" />
+            <span>Send</span>
+          </button>
+        </form>
+      </div>
+  
+      
   </section>
+  
   
 
   <footer>

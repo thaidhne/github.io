@@ -30,6 +30,9 @@ toggleDarkCheckbox.addEventListener('change', () => {
   localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
 });
 
+
+
+
 const music = document.getElementById("bg-music");
 
   function playMusicOnce() {
@@ -40,3 +43,30 @@ const music = document.getElementById("bg-music");
 
   // Lắng nghe click trên toàn trang
   document.addEventListener("click", playMusicOnce);
+
+  const form = document.querySelector(".contact-form");
+  const sendBtn = document.getElementById("sendBtn");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Gửi form bằng AJAX
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(() => {
+      sendBtn.classList.add("sent");
+      sendBtn.disabled = true;
+      setTimeout(() => {
+        sendBtn.classList.remove("sent");
+        sendBtn.disabled = false;
+        form.reset();
+      }, 4000);
+    })
+    .catch(() => {
+      alert("Oops! Something went wrong. Please try again.");
+    });
+  });
