@@ -143,6 +143,32 @@ input:checked + .switch .slider {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Avatar style - square, left side */
+.avatar-wrapper.left-align {
+  flex: 0 0 200px;
+}
+
+.avatar-square {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+/* Caption beside avatar */
+.text.caption-side {
+  flex: 1;
+  min-width: 260px;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .hero .text {
@@ -269,7 +295,30 @@ footer {
     to { width: 50% }
   }
 
-
+  .about-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: left;
+    margin-bottom: 20px;
+  }
+  
+  .about-title img {
+    width: 80px;
+    height: 80px;
+    filter: invert(0); /* đen mặc định */
+    transition: filter 0.4s ease;
+  }
+  
+  /* Dark mode: chuyển icon trắng */
+  body.dark-mode .about-title img {
+    filter: invert(1);
+  }
+  
+  .about-title h2 {
+    margin: 0;
+    font-size: 23px;
+  }
 #play-music {
   display: none;
 }
@@ -313,7 +362,13 @@ footer {
   opacity: 0.85;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+}
 
+h1, h2, h3, nav {
+  font-family: 'Poppins', sans-serif;
+}
 
 /* Responsive for iPhone 14, 15, 16 and similar devices */
 @media only screen and (max-width: 460px) {
@@ -352,8 +407,16 @@ footer {
 
   .hero-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 20px;
+  }
+
+  .avatar-wrapper.left-align {
+    margin-bottom: 20px;
+  }
+
+  .text.caption-side {
+    text-align: center;
   }
 
   .hero .text {

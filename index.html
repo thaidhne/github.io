@@ -6,6 +6,9 @@
   <title>ThaiDH | Portfolio</title>
   <link rel="icon" href="icons/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
   <header>
@@ -35,31 +38,35 @@
     </div>
   </header>
 
-<section class="hero fade-in">
-  <div class="container hero-content">
-    <div class="text">
-      <h2 class="typewriter">Hi, I'm <span class="highlight">Thai</span></h2>
-      <p>Hi there, I'm Thai Dinh Hoang, a .Net backend developer in core banking, website who loves building cool things with code.</p>
-      <p>You can find me on IG or FB – check my bio for more info.</p>
-       <div class="social-links">
-        <a href="https://facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook"/></a>
-        <a href="https://tiktok.com/" target="_blank"><img src="images/tiktok.svg" alt="TikTok"/></a>
-        <a href="https://instagram.com/" target="_blank"><img src="images/instagram.svg" alt="Instagram"/></a>
+  <section class="hero fade-in">
+    <div class="container hero-content">
+      <div class="avatar-wrapper left-align">
+        <img src="images/profile.jpg" alt="Profile photo of Thai" class="avatar-square" />
+      </div>
+      <div class="text caption-side">
+        <h2 class="typewriter">Hi, I'm <span class="highlight">Thai</span></h2>
+        <p>Hi there, I'm Thai Dinh Hoang, a .NET backend developer in core banking and web development who loves building cool things with code.</p>
+        <p>You can find me on IG or FB – check my bio for more info.</p>
+        <div class="social-links">
+          <a href="https://facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook"/></a>
+          <a href="https://tiktok.com/" target="_blank"><img src="images/tiktok.svg" alt="TikTok"/></a>
+          <a href="https://instagram.com/" target="_blank"><img src="images/instagram.svg" alt="Instagram"/></a>
+        </div>
       </div>
     </div>
-    <div class="avatar">
-      <img src="images/profile.jpg" alt="Profile photo of Thai" />
-    </div>
-  </div>
-</section>
+  </section>
+  
 
 
  <section id="about" class="fade-in">
   <div class="container">
-    <h2>About Me</h2>
+    <div class="about-title">
+      <img src="images/person.svg" alt="About Icon" />
+      <h2>About Me</h2>
+    </div>
     <p>Hey there! I’m Thai 👋</p>
     <p>I’ve been working as a backend developer for over 3 years, mainly in the core banking world.</p>
-    <p>I write most of my code in C#, and love building things that just… work.</p>
+    <p>I write most of my code in .NET, and love building things that just… work.</p>
     <p>Outside of banking systems, I enjoy creating websites and even dabble in a bit of UI/UX design — turning simple ideas into cool, functional designs is super fun to me!</p>
     <p>When I’m not coding, you’ll probably find me camping under the stars, wandering somewhere dreamy, or exploring a quiet place off the grid. Nature is my reset button 🌿🏕️✨</p>
   </div>
@@ -84,13 +91,16 @@
 
   <section id="contact" class="fade-in contact-section">
     <div class="container">
-      <h2>Contact Me</h2>
+      <div class="about-title">
+        <img src="images/mail.svg" alt="About Icon" style="width: 50px; height: 50px;" />
+        <h2>Contact Me</h2>
+      </div>
       <p>Feel free to reach out! I'd love to hear from you.</p>
   
       <form action="https://formspree.io/f/xvgrlvon" method="POST" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <textarea name="message" rows="5" placeholder="write somethings for me ..." required></textarea>
         <button type="submit">Send</button>
       </form>
     </div>
