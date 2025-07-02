@@ -25,16 +25,10 @@
         </ul>
       </nav>
       <div class="dark-toggle">
-        <input type="checkbox" id="toggle-dark" />
-        <label for="toggle-dark" class="switch">
-          <span class="slider"></span>
-        </label>
+        <button id="darkModeBtn" class="dark-mode-icon">
+          <img id="darkIcon" src="icons/moon.svg" alt="Toggle Dark Mode" />
+        </button>
       </div>
-      <audio id="bg-music" loop>
-        <source src="music/pianosong.mp3" type="audio/mpeg">
-      </audio>
-
-    <button id="play-music">🎵 Bật nhạc</button>
     </div>
   </header>
 
@@ -169,5 +163,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const darkBtn = document.getElementById("darkModeBtn");
+      const darkIcon = document.getElementById("darkIcon");
+      const body = document.body;
+  
+  
+      // Toggle dark mode khi bấm
+      darkBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+  
+        const isDark = body.classList.contains("dark-mode");
+        darkIcon.src = isDark ? "icons/moon.svg" : "icons/sun.svg";
+  
+        localStorage.setItem("darkMode", isDark);
+      });
+    });
+  </script>
+  
 </body>
+
+
 </html>

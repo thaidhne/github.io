@@ -30,20 +30,6 @@ toggleDarkCheckbox.addEventListener('change', () => {
   localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
 });
 
-
-
-
-const music = document.getElementById("bg-music");
-
-  function playMusicOnce() {
-    music.play();
-    // Gỡ bỏ sự kiện sau khi phát 1 lần
-    document.removeEventListener("click", playMusicOnce);
-  }
-
-  // Lắng nghe click trên toàn trang
-  document.addEventListener("click", playMusicOnce);
-
   const form = document.querySelector(".contact-form");
   const sendBtn = document.getElementById("sendBtn");
 
@@ -86,5 +72,8 @@ const music = document.getElementById("bg-music");
       menu.style.display = 'none';
     });
   });
+
+
+
 
 
