@@ -16,7 +16,7 @@
       <a href="https://thaidhne.vercel.app/" class="logo">
             <img src="images/sign.png" alt="Thai logo" class="logo-img" />
       </a>
-      <nav>
+      <nav class="desktop">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -30,14 +30,25 @@
           <span class="slider"></span>
         </label>
       </div>
-<audio id="bg-music" loop>
-  <source src="music/pianosong.mp3" type="audio/mpeg">
-</audio>
+      <audio id="bg-music" loop>
+        <source src="music/pianosong.mp3" type="audio/mpeg">
+      </audio>
 
-<button id="play-music">🎵 Bật nhạc</button>
-
+    <button id="play-music">🎵 Bật nhạc</button>
     </div>
   </header>
+
+  <div class="mobile-toggle" id="menu-toggle">
+    <img src="images/menu.svg" alt="Menu icon" />
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 
   <section class="hero fade-in">
     <div class="container hero-content">
@@ -105,7 +116,7 @@
       </div>
       <div class="experience-list">
         <div class="experience-item">
-          <h3>Software Developer</h3>
+          <h3>Software Developer | Just-in-time-solutions</h3>
           <p class="time">2022 – Present</p>
           <p>I work as a core banking backend developer, building and maintaining secure, high-performance systems that power daily financial operations.
             Using C# and .NET, I develop APIs, optimize transaction workflows, and collaborate with teams to ensure stability, scalability, and compliance in critical banking environments.</p>
@@ -147,8 +158,6 @@
           </button>
         </form>
       </div>
-  
-      
   </section>
   
   

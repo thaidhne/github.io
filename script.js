@@ -71,3 +71,20 @@ const music = document.getElementById("bg-music");
     });
   });
 
+
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+    menu.style.top = "30%";
+  });
+
+  // Optional: Ẩn menu khi click link
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.style.display = 'none';
+    });
+  });
+
+
