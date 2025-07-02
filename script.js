@@ -30,6 +30,20 @@ toggleDarkCheckbox.addEventListener('change', () => {
   localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
 });
 
+
+
+
+const music = document.getElementById("bg-music");
+
+  function playMusicOnce() {
+    music.play();
+    // Gỡ bỏ sự kiện sau khi phát 1 lần
+    document.removeEventListener("click", playMusicOnce);
+  }
+
+  // Lắng nghe click trên toàn trang
+  document.addEventListener("click", playMusicOnce);
+
   const form = document.querySelector(".contact-form");
   const sendBtn = document.getElementById("sendBtn");
 
@@ -57,23 +71,6 @@ toggleDarkCheckbox.addEventListener('change', () => {
     });
   });
 
-
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("mobileMenu");
-
-  toggle.addEventListener("click", () => {
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-    menu.style.top = "30%";
-  });
-
-  // Optional: Ẩn menu khi click link
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.style.display = 'none';
-    });
-  });
-
-
-
+  
 
 

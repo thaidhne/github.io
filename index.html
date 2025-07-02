@@ -164,11 +164,10 @@
 
   <script src="script.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
       const darkBtn = document.getElementById("darkModeBtn");
       const darkIcon = document.getElementById("darkIcon");
       const body = document.body;
-  
   
       // Toggle dark mode khi bấm
       darkBtn.addEventListener("click", () => {
@@ -181,7 +180,22 @@
       });
     });
   </script>
-  
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobileMenu");
+
+    toggle.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      menu.style.top = "30%";
+    });
+
+    // Optional: Ẩn menu khi click link
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 
 
